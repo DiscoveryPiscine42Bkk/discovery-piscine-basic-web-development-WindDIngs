@@ -2,12 +2,20 @@
 <html>
 <body>
 
-<button type="button" onclick="myFunction()">Set background color</button>
+<button type="button" onclick="changecolour()">Set background color</button>
 
 <script>
-function myFunction() {
-//   document.body.style.backgroundColor = "red";
-    
+    function get_random_color() {
+  function c() {
+    var hex = Math.floor(Math.random()*256).toString(16);
+    return ("0"+String(hex)).substr(-2); // pad with zero
+  }
+  return "#"+c()+c()+c();
+}
+
+function changecolour() {
+  document.body.style.backgroundColor = get_random_color();
+
 }
 </script>
 
