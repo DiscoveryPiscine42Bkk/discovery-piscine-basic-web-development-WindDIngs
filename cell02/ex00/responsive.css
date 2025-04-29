@@ -1,0 +1,22 @@
+
+h1 {text-align: center;}
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+  width:100%; height: calc(100vh - 15px);
+
+}
+td:nth-child(even) {
+  background-color: #12de00;
+}
+td:nth-child(odd) {
+  background-color: #8600d3;
+}
+
+tr{
+    height: 60px;
+}
+
+td{
+    color: white; text-align: center; width:50%; font-size: 50px
+}
