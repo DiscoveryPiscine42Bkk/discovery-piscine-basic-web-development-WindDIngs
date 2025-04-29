@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html>
+<style>
+    #balloon {
+        background-color: #ff0000;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+</style>
+
 <head>
-<link rel="stylesheet" href="balloon.css">
-<title>Pop the ballon</title>
+
+<title>Pop the ballopn</title>
 </head>
 <body>
-   <div class="balloon" onclick="increase_size()">
+   <div id="balloon" onclick="click()" onmouseleave="onleave()">
         <script>
-            function increase_size() {
-                if (document) {
-                    
-                }
-            }
-
-            function decrease_size() {
-                if (condition) {
-                    
-                } else {
-                    
-                }
-                
-            }
 
             function change_color() {
-                    if (document.body.style.backgroundColor == "red") {
-                        document.body.style.backgroundColor = "green"
-                    } else if (document.body.style.backgroundColor == "green") {
-                        document.body.style.backgroundColor = "blue"
-                    } else {
-                        document.body.style.backgroundColor = "red"
-                    }
-                }
-
-            function change_color_onleave() {
-                if (document.body.style.backgroundColor == "red") {
-                    document.body.style.backgroundColor = "blue"
-                } else if (document.body.style.backgroundColor == "blue") {
-                    document.body.style.backgroundColor = "green"
+                var ball_color = document.getElementById("balloon").style.backgroundColor;
+                if (ball_color == "red") {
+                    document.getElementById("balloon").style.backgroundColor = "green";
+                } else if (ball_color == "green") {
+                    document.getElementById("balloon").style.backgroundColor = "blue";
                 } else {
-                    document.body.style.backgroundColor = "red"
+                    document.getElementById("balloon").style.backgroundColor = "red";
                 }
             }
+
+            function change_color_onleave() {
+                var ball_color = document.getElementById("balloon").style.backgroundColor;
+                if (ball_color == "red") {
+                    document.getElementById("balloon").style.backgroundColor = "blue";
+                } else if (ball_color == "blue") {
+                    document.getElementById("balloon").style.backgroundColor = "green";
+                } else {
+                    document.getElementById("balloon").style.backgroundColor = "red";
+                }
+            }
+
+            function change_size() {
+                var size = document.getElementById("balloon");
+                if (size.offsetHeight == 420) {
+                    document.getElementById("balloon").style.height = 200 + 'px';
+                    document.getElementById("balloon").style.width = 200 + 'px';
+                }
+                else {
+                    document.getElementById("balloon").style.height = size.offsetHeight + 10 + 'px';
+                    document.getElementById("balloon").style.width = size.offsetWidth + 10 + 'px';        
+                }   
+            }
+            
+            function change_size_onleave() {
+                var size = document.getElementById("balloon");
+                if (size.offsetHeight != 200) {
+                    document.getElementById("balloon").style.height = size.offsetHeight - 5 + 'px';
+                    document.getElementById("balloon").style.width = size.offsetWidth - 5 + 'px';
+                }  
+            }
+            
+            function click() {
+                change_color();
+                change_size();
+            }
+
+            function onleave() {
+                change_color_onleave();
+                change_size_onleave();
+            }
+
         </script>
    </div>
 
