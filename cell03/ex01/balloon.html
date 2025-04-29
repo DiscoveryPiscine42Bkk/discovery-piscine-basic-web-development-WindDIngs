@@ -9,12 +9,16 @@
         <script>
             function increase_size() {
                 function change_color() {
-                    if (document.body.style.backgroundColor == red) {
-                        
+                    if (document.body.style.backgroundColor == "red") {
+                        document.body.style.backgroundColor = "green"
+                    } else if (document.body.style.backgroundColor == "green") {
+                        document.body.style.backgroundColor = "blue"
                     } else {
-                        
+                        document.body.style.backgroundColor = "red"
                     }
-
+                }
+                if (document) {
+                    
                 }
             }
         </script>
