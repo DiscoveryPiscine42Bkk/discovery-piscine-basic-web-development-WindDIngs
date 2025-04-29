@@ -44,6 +44,8 @@ th{
 .img_pfp{
     width: auto;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 img{
