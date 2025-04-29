@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+    margin: 0;
+    perspective: 1px;
+
+}
+
+.section1,.section2,.section3{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+
+}
+
+.section1{
+    background-image: url(https://cdn.freebiesupply.com/logos/thumbs/2x/aperture-science-3-logo.png);
+    scale: 70%;
+}
+
+.section2{
+    background: gray;
+    min-height: 50vh;
+
+}
+
+.section3{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Aperture_Science.svg);
+    scale: 60%;
+}
+
+.text{
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    font-size: 5vw;
+    transform: translate(-45%,0);
+    color: white;
+}
