@@ -36,6 +36,6 @@ body{
     left: 50%;
     position: absolute;
     font-size: 5vw;
-    transform: translate(-45%,0);
-    color: white;
+    transform: translate(-50%,0);
+    color: rgb(0, 0, 0);
 }
