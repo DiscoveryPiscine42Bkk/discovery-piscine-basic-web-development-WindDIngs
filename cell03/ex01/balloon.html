@@ -2,7 +2,7 @@
 <html>
 <style>
     #balloon {
-        background-color: #ff0000;
+        background-color: red;
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -15,7 +15,7 @@
 <title>Pop the ballopn</title>
 </head>
 <body>
-   <div id="balloon" onclick="click()" onmouseleave="onleave()">
+    <div id="balloon" onclick="clickevent()" onmouseleave="mouseleave()">
         <script>
 
             function change_color() {
@@ -60,12 +60,12 @@
                 }  
             }
             
-            function click() {
+            function clickevent() {
                 change_color();
                 change_size();
             }
 
-            function onleave() {
+            function mouseleave() {
                 change_color_onleave();
                 change_size_onleave();
             }
