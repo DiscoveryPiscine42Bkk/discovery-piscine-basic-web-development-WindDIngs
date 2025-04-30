@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
-<style>
-</style>
 <head>
-<title>Task Management System</title>
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="todo.js"></script>
 </head>
 <body>
-    <h2>TO DO</h2>
-    <div id="ft_list">
-    </div>
-<button onclick="add_todo()">New</button>
-<button onclick="remove_todo()">Remove</button>
+    <h1>TO DO</h1>
+    <button onclick="add_todo()" style="margin: 10px; font-family: 'Courier New', Courier, monospace; font-size: 18px;">New</button>
+    <br>
 
-<script>
-    function add_todo(){
-        prompt(
-            'Enter Task', task)
-            add_task(task)
-    }
+    <div id="ft_list"></div>
 
-    function remove_todo(){
-        if(confirm('Are you sure you want to remove this task?')){
-            remove_task(task);
-        } else{
-            log.innerText= "Cancelled"
-        }
-    }
+    <!-- <br> -->
+    <!-- <button onclick="remove_todo()">Remove</button> -->    
 
-</script>
+    <script>getCookies();
+    </script>
 
 </body>
 </html>
