@@ -15,6 +15,7 @@
 <title>Pop the balloon</title>
 </head>
 <body>
+
     <div id="balloon" onclick="clickevent()" onmouseleave="mouseleave()">
         <script>
         //    
@@ -33,7 +34,7 @@
         //    })
 
         //     Alternative method
-
+        window.onload=clickevent()
             function change_color() {
                 var ball_color = document.getElementById("balloon").style.backgroundColor;
                 if (ball_color == "red") {
