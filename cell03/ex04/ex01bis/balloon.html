@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #balloon {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+</style>
+
+<head>
+
+<title>Pop the balloon</title>
+</head>
+<body>
+
+    <div id="balloon" onclick="clickevent()" onmouseleave="mouseleave()">
+        <script>
+        //    
+        //    let arrayC=['red','green','blue'];
+        //    let colorNow=0;
+           
+        //    ... .addEventListener('click', () =>{   //change click to mouseover for reverse
+           
+        //             colorNow+=1;
+        //             if ( if it is reach the limit max of the data in the array) {
+        //                 colorNow=0;
+        //             } else {
+        //                     colorNow+=1;
+        //                     OUTPUT   --->>  ... . style.backgroundColor=arrayC[colorNow]; 
+        //             }
+        //    })
+
+        //     Alternative method
+        window.onload=clickevent()
+            function change_color() {
+                var ball_color = document.getElementById("balloon").style.backgroundColor;
+                if (ball_color == "red") {
+                    document.getElementById("balloon").style.backgroundColor = "green";
+                } else if (ball_color == "green") {
+                    document.getElementById("balloon").style.backgroundColor = "blue";
+                } else {
+                    document.getElementById("balloon").style.backgroundColor = "red";
+                }
+            }
+
+            function change_color_onleave() {
+                var ball_color = document.getElementById("balloon").style.backgroundColor;
+                if (ball_color == "red") {
+                    document.getElementById("balloon").style.backgroundColor = "blue";
+                } else if (ball_color == "blue") {
+                    document.getElementById("balloon").style.backgroundColor = "green";
+                } else {
+                    document.getElementById("balloon").style.backgroundColor = "red";
+                }
+            }
+
+            function change_size() {
+                var size = document.getElementById("balloon");
+                if (size.offsetHeight == 420) {
+                    document.getElementById("balloon").style.height = 200 + 'px';
+                    document.getElementById("balloon").style.width = 200 + 'px';
+                }
+                else {
+                    document.getElementById("balloon").style.height = size.offsetHeight + 10 + 'px';
+                    document.getElementById("balloon").style.width = size.offsetWidth + 10 + 'px';        
+                }   
+            }
+            
+            function change_size_onleave() {
+                var size = document.getElementById("balloon");
+                if (size.offsetHeight != 200) {
+                    document.getElementById("balloon").style.height = size.offsetHeight - 5 + 'px';
+                    document.getElementById("balloon").style.width = size.offsetWidth - 5 + 'px';
+                }  
+            }
+            
+            function clickevent() {
+                change_color();
+                change_size();
+            }
+
+            function mouseleave() {
+                change_color_onleave();
+                change_size_onleave();
+            }
+
+        </script>
+   </div>
+
+</body>
+</html>
