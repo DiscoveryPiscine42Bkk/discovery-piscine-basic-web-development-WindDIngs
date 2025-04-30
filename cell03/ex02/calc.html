@@ -35,6 +35,8 @@
                     return n1 + n2
                 } else if (operator == "-"){
                     return n1 - n2
+                } else if (operator == "*") {
+                    return n1*n2
                 } else if (operator == "/") {
                     if (n2==0) {
                         return "It's over 9000"
@@ -47,7 +49,6 @@
                     } else{
                         return n1%n2
                     }
-                }
             }
 
             function calc() {
