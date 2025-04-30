@@ -8,21 +8,25 @@
 <body>
     <h2>TO DO</h2>
     <div id="ft_list">
-        
-
     </div>
 <button onclick="add_todo()">New</button>
 <button onclick="remove_todo()">Remove</button>
 
 <script>
     function add_todo(){
-
+        prompt(
+            'Enter Task', task)
+            add_task(task)
     }
 
     function remove_todo(){
-
+        if(confirm('Are you sure you want to remove this task?')){
+            remove_task(task);
+        } else{
+            log.innerText= "Cancelled"
+        }
     }
-    
+
 </script>
 
 </body>
