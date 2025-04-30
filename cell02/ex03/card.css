@@ -10,7 +10,7 @@ table, th, td, tr {
     color: wheat;
     border-collapse: collapse;
     justify-content: center;
-    width: 290px;
+    width: 300px;
     background-color: grey;
 }
 
@@ -55,19 +55,18 @@ img{
 }
 
 p{
-    font-size: 18px;
-    color: aliceblue;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: rgb(237, 167, 255);
 }
 .name{
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 900;
     font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
 }
 
-.subtext{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
+    
 
 .button{
     background-color: #000000;
