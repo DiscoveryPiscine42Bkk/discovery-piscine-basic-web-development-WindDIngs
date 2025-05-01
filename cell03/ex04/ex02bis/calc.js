@@ -30,11 +30,17 @@ function operation(operator,n1,n2){
 }
 
 function calc() {
-    var val1 = document.getElementById("inp1").value
-    var val2 = document.getElementById("inp2").value
+    // var val1 = document.getElementById("inp1").value
+    // var val2 = document.getElementById("inp2").value
+    var val1 = $("#inp1").val()
+    var val2 = $("#inp2").val()
+
     if (!isNaN(val1)&&!isNaN(val2) && val1>=0 && val2>=0){
-        alert(operation(document.getElementById("Op").value,val1,val2))
-        console.log(operation(document.getElementById("Op").value,val1,val2))
+        // alert(operation(document.getElementById("Op").value,val1,val2))
+        // console.log(operation(document.getElementById("Op").value,val1,val2))
+
+        alert(operation(($("#Op").val()),val1,val2))
+        console.log(operation(($("#Op").val()),val1,val2))
     } else {
         alert("Error :(")
         console.log("Error :(")

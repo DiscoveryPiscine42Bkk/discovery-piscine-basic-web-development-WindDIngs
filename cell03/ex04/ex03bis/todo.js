@@ -45,7 +45,9 @@ function add_todo(){
         };
         todos.push(task)
         document.cookie = "texts=" + todos;
-        document.getElementById("ft_list").prepend(nDiv);        
+        // document.getElementById("ft_list").prepend(nDiv);    
+        $("#ft_list").prepend(nDiv)
+        
     } else{
         alert("Please enter task!");
     }
