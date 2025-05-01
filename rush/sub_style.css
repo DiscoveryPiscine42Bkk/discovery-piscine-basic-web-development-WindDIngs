@@ -1,0 +1,130 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 36px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  li a:hover {
+    background-color: rgb(40, 192, 13);
+  }
+  
+
+  .backforw{
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%); */
+  }
+
+
+
+h1 {text-align: center;
+    font-size: 36px;
+    color: black;
+}
+
+table, th, td, tr {
+    border: 2px transparent;
+    color: wheat;
+    border-collapse: collapse;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(99, 99, 99);
+}
+
+th{
+    margin-top: 200px;
+}
+
+
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.frame_main{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.frame_sub{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.img_pfp{
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    width: 128px;
+    height: 128px;
+
+}
+
+p{
+    font-family: Helvetica;
+    font-size: 18px;
+    color: azure;
+    font-weight: 200;
+}
+.name{
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.subtitle{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:600;
+    color: rgb(70, 149, 239);
+    margin-top: 19px;
+    margin-bottom: 0%;
+}
+
+.subtext{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight:200;
+}
+
+hr{
+    height:2px;
+    border-width:100%;
+    color:white;
+    background-color:white;
+}
+
+h1{
+    background-color: rgb(131, 255, 135);
+    padding: 20px 30px;
+}
