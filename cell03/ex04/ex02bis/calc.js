@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    $("button").click(function(){
+        calc();
+    });
+});
+
 setInterval(()=>{alert("Please, use me...")},30000)
 function operation(operator,n1,n2){
     n1 = Number(n1)
