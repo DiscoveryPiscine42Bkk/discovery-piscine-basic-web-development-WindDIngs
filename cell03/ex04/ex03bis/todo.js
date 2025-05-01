@@ -22,14 +22,14 @@ function getCookies()
             nDiv.appendChild(nPara);
             
             nDiv.onclick = function(){
-                confirmDelete(this);
+                remove_todo(this);
             };
             document.cookie = "texts=" + todos;
-            document.getElementById("ft_list").appendChild(nDiv);
+            // document.getElementById("ft_list").appendChild(nDiv);
+            $("#ft_list").appendChild(nDiv)
         }
     }
 }
-
 function add_todo(){
     var task = window.prompt("Enter Task(s): ");
     if (task && !task.includes(";") && !todos.includes(task)) {
