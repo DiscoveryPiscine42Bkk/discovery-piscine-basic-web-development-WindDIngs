@@ -14,9 +14,9 @@ function getCookies()
         const cookies = allCookie.split(',');
         for (var i = 0; i < cookies.length; ++i){
             todos.push(cookies[i]);
-            var nDiv = document.createElement("div");
+            var nDiv = $('<div>');
             nDiv.id = "todo"
-            var nPara = document.createElement("p");
+            var nPara = $('<p>');
             const node = document.createTextNode(cookies[i]);
             nPara.appendChild(node);
             nDiv.appendChild(nPara);
@@ -33,10 +33,10 @@ function getCookies()
 function add_todo(){
     var task = window.prompt("Enter Task(s): ");
     if (task && !task.includes(";") && !todos.includes(task)) {
-        var nDiv = document.createElement("div");
+        var nDiv = $('<div>');
         nDiv.id="todo"
         
-        var nPara = document.createElement("p");
+        var nPara = $('<p>');
         const node = document.createTextNode(task);
         nPara.appendChild(node)
         nDiv.appendChild(node)
