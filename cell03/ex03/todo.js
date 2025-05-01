@@ -16,7 +16,7 @@ function getCookies()
             nDiv.appendChild(nPara);
             
             nDiv.onclick = function(){
-                confirmDelete(this);
+                remove_todo(this);
             };
             document.cookie = "texts=" + todos;
             document.getElementById("ft_list").appendChild(nDiv);
@@ -33,7 +33,7 @@ function add_todo(){
         var nPara = document.createElement("p");
         const node = document.createTextNode(task);
         nPara.appendChild(node)
-        nDiv.appendChild(node)
+        nDiv.appendChild(nPara)
         nDiv.onclick = function () {
             remove_todo(this)
         };
@@ -62,3 +62,6 @@ function remove_todo(item){
     // var li = document.createElement('li');
     // li.innerText = newtask;
     // list.prepend(li);
+
+
+

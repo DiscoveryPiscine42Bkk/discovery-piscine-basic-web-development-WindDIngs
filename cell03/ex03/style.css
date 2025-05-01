@@ -10,5 +10,26 @@ h1{
 }
 #ft_list{
     font-size: 20px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
+#button{
+    margin: 10px; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 18px;
+}
+
+#todo {
+    text-align: center;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(101, 101, 101);
+    color: aliceblue;
+    
 }

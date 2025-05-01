@@ -54,7 +54,6 @@ function add_todo(){
 }
 function remove_todo(item){
     var delcom = confirm('Are you sure you want to remove this task?');
-    
     if(delcom){
         const index = todos.indexOf(item.firstChild.innerText);
         todos.splice(index, 1);

@@ -5,6 +5,7 @@ $(document).ready(function() {
 });
 
 setInterval(()=>{alert("Please, use me...")},30000)
+
 function operation(operator,n1,n2){
     n1 = Number(n1)
     n2 = Number(n2)
