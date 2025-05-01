@@ -19,9 +19,15 @@ function increaseSize() {
     $("#balloon").css("height", nHeight.toString() + "px");
 
     const currentCol = $("#balloon").css("background-color");
-    if (currentCol === "rgb(255, 0, 0)") { $("#balloon").css("background-color", "rgb(0, 255, 0)")}
-    else if (currentCol === "rgb(0, 255, 0)") { $("#balloon").css("background-color", "rgb(0, 0, 255)")}
-    else { $("#balloon").css("background-color", "rgb(255, 0, 0)")}
+    if (currentCol === "rgb(255, 0, 0)") { 
+        $("#balloon").css("background-color", "rgb(0, 255, 0)"
+        )}
+    else if (currentCol === "rgb(0, 255, 0)") { 
+        $("#balloon").css("background-color", "rgb(0, 0, 255)"
+        )}
+    else { 
+        $("#balloon").css("background-color", "rgb(255, 0, 0)"
+    )}
 
 }
 
@@ -34,8 +40,14 @@ function decreaseSize(){
 
         const currentCol = $("#balloon").css("background-color");
 
-        if (currentCol === "rgb(255, 0, 0)") { $("#balloon").css("background-color", "rgb(0, 0, 255)")}
-        else if (currentCol === "rgb(0, 0, 255)") { $("#balloon").css("background-color", "rgb(0, 255, 0)")}
-        else { $("#balloon").css("background-color", "rgb(255, 0, 0)")}
+        if (currentCol === "rgb(255, 0, 0)") { 
+            $("#balloon").css("background-color", "rgb(0, 0, 255)"
+
+            )} else if (currentCol === "rgb(0, 0, 255)") {
+                $("#balloon").css("background-color", "rgb(0, 255, 0)"
+
+                )}
+        else { 
+            $("#balloon").css("background-color", "rgb(255, 0, 0)")}
     }
 }
