@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("#button").click(function(){
         calc();
     });
+    
 });
 
 setInterval(()=>{alert("Please, use me...")},30000)

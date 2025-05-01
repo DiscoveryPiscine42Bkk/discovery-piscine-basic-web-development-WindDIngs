@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#button").click(function(){
+    getCookies();
+    $("#button").click(function(e){
         add_todo();
     });
 });
@@ -12,41 +13,37 @@ function getCookies()
     const allCookie = theCookie.split('=')[1];
     if (allCookie){
         const cookies = allCookie.split(',');
-        for (var i = 0; i < cookies.length; ++i){
+        for (var i = 0; i < cookies.length; ++i)
+        {
             todos.push(cookies[i]);
-            var nDiv = $('<div>');
-            nDiv.id = "todo"
-            var nPara = $('<p>');
-            const node = document.createTextNode(cookies[i]);
-            nPara.appendChild(node);
-            nDiv.appendChild(nPara);
-            
-            nDiv.onclick = function(){
-                remove_todo(this);
-            };
-            document.cookie = "texts=" + todos;
-            // document.getElementById("ft_list").appendChild(nDiv);
-            $("#ft_list").appendChild(nDiv)
+            var nDiv = document.createElement("div");
+            $(nDiv).attr("id", "todo");
+            var nPara = document.createElement("p");
+            $(nPara).text(cookies[i]);
+            $(nDiv).append(nPara);
+            $(nDiv).click(function(e) {
+                remove_todo(this)
+            });
+            $("#ft_list").append(nDiv);
         }
+        document.cookie = "texts=" + todos;
     }
 }
 function add_todo(){
     var task = window.prompt("Enter Task(s): ");
     if (task && !task.includes(";") && !todos.includes(task)) {
-        var nDiv = $('<div>');
-        nDiv.id="todo"
-        
-        var nPara = $('<p>');
-        const node = document.createTextNode(task);
-        nPara.appendChild(node)
-        nDiv.appendChild(node)
-        nDiv.onclick = function () {
-            remove_todo(this)
-        };
         todos.push(task)
+        
+        var nDiv = document.createElement("div");
+        $(nDiv).attr("id","todo");
+        var nPara = document.createElement("p");
+        $(nPara).text(task);
+        $(nDiv).append(nPara);
+        $("#ft_list").append(nDiv);
         document.cookie = "texts=" + todos;
-        // document.getElementById("ft_list").prepend(nDiv);    
-        $("#ft_list").prepend(nDiv)
+        $(nDiv).click(function(e) {
+            remove_todo(this)
+        });
         
     } else{
         alert("Please enter task!");
