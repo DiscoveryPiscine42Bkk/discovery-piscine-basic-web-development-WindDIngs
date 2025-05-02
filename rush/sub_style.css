@@ -54,6 +54,7 @@ th{
 .center{
     margin-left: auto;
     margin-right: auto;
+    align-self: center;
 }
 
 
@@ -82,7 +83,8 @@ th{
 img{
     width: 128px;
     height: 128px;
-
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 p{
@@ -100,6 +102,8 @@ p{
     color: rgb(70, 149, 239);
     margin-top: 12px;
     margin-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subtext{
@@ -110,6 +114,8 @@ p{
     margin-bottom: 0px;
     font-weight:200;
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 hr{
